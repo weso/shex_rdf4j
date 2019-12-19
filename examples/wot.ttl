@@ -1,0 +1,23 @@
+@prefix :      <http://www.w3.org/ns/td#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ex:    <http://example.org/> .
+@prefix saref: <http://uri.etsi.org/m2m/saref#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mySensor  a        saref:Sensor ;
+ :base         <coap:///www.example.com:5683/temp/> ;
+ :interaction  [ a            :Event ;
+                 :link        [ :href       ex:ev1 ;
+                                :mediaType  "application/json"
+                              ] ;
+                 :name        "myChange" ;
+                 :outputData  [] 
+   ] ;
+ :interaction  [ a            :Event ;
+                 :link        [ :href       ex:ev1 ;
+                                :mediaType  "application/json"
+                              ] ;
+                 :name        "myWarning" ;
+                 :outputData  [] 
+ ] ;
+ :name         "myTempSensor" .

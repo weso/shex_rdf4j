@@ -1,0 +1,62 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "href" : "ex:ev1",
+    "mediaType" : "application/json"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "Event",
+    "link" : "_:b2",
+    "name" : "myChange",
+    "outputData" : "_:b3"
+  }, {
+    "@id" : "_:b2",
+    "href" : "ex:ev1",
+    "mediaType" : "application/json"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "Event",
+    "link" : "_:b0",
+    "name" : "myWarning",
+    "outputData" : "_:b5"
+  }, {
+    "@id" : "ex:mySensor",
+    "@type" : "saref:Sensor",
+    "base" : "coap:///www.example.com:5683/temp/",
+    "interaction" : [ "_:b1", "_:b4" ],
+    "name" : "myTempSensor"
+  } ],
+  "@context" : {
+    "href" : {
+      "@id" : "http://www.w3.org/ns/td#href",
+      "@type" : "@id"
+    },
+    "mediaType" : {
+      "@id" : "http://www.w3.org/ns/td#mediaType"
+    },
+    "link" : {
+      "@id" : "http://www.w3.org/ns/td#link",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://www.w3.org/ns/td#name"
+    },
+    "outputData" : {
+      "@id" : "http://www.w3.org/ns/td#outputData",
+      "@type" : "@id"
+    },
+    "base" : {
+      "@id" : "http://www.w3.org/ns/td#base",
+      "@type" : "@id"
+    },
+    "interaction" : {
+      "@id" : "http://www.w3.org/ns/td#interaction",
+      "@type" : "@id"
+    },
+    "@vocab" : "http://www.w3.org/ns/td#",
+    "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "ex" : "http://example.org/",
+    "saref" : "http://uri.etsi.org/m2m/saref#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#"
+  }
+}

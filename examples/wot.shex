@@ -1,0 +1,37 @@
+prefix :    <http://www.w3.org/ns/td#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<Thing> { 
+ :interaction @<InteractionPattern>* ;
+ :security @<Security>? ;
+ :base IRI ?;
+ :name xsd:string 
+}
+
+<InteractionPattern> {
+ :link @<Link> ;
+ :name xsd:string 
+}
+
+<Property> <InteractionPattern> AND {
+ :outputData @<DataSchema> ;
+ :writable   xsd:boolean               
+}
+
+<Action> <InteractionPattern> AND {
+ :outputData @<DataSchema> ;
+ :inputData @<DataSchema>               
+}
+
+<Event> <InteractionPattern> AND {
+  :outputData @<DataSchema> ;
+}
+
+<Link> {
+  :href IRI ;
+  :mediaType xsd:string
+}
+
+<DataSchema> { 
+  # TODO...
+}

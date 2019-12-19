@@ -1,0 +1,28 @@
+prefix :     <http://example.org/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix xsd:  <http://www.w3.org/2001/XMLSchema#>
+prefix sh:   <http://www.w3.org/ns/shacl#>
+
+:IssueShape a sh:Shape;
+   sh:property [
+     sh:predicate sh:state ;
+     sh:minCount 1 ;
+     sh:maxCount 1 ;
+     sh:in (:unassigned :assigned)
+   ] ;
+   sh:property [
+    sh:predicate :reportedBy ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:shape :UserShape
+   ] .
+
+:UserShape a sh:Shape .
+  #{                         # A :UserShape has:
+  #  (                                # either
+  #     foaf:name xsd:string          #   a FOAF name
+  #   |                               #  or
+  #     foaf:givenName xsd:string+ ;  #   one or more givenNames
+  #     foaf:familyName xsd:string) ; #   and one familyName.
+#	foaf:mbox IRI
+#}
