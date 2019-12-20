@@ -3,6 +3,7 @@
 *.iml
 .ensime
 .ensime_cache
+.attach_pid*
 
 # sbt specific
 dist/*

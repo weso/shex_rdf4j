@@ -40,9 +40,9 @@ public class Validate {
                          String shapeMapFile,
                          String shapeMapFormat) {
 
-     // RDFAsRDF4jModel emptyRDF = RDFAsRDF4jModel$.MODULE$.empty();
+        // RDFAsRDF4jModel emptyRDF = RDFAsRDF4jModel$.MODULE$.empty();
 
-     return FileUtils.getContents(dataFile).flatMap(strRdf ->
+     /*return FileUtils.getContents(dataFile).flatMap(strRdf ->
             RDFAsRDF4jModel.apply().unsafeRunSync().fromString(strRdf,dataFormat,noneIri).flatMap(rdf ->
             FileUtils.getContents(schemaFile).flatMap(schemaStr ->
             Schema.fromString(schemaStr,schemaFormat,noneIri, noneRdf).flatMap(schema ->
@@ -61,6 +61,8 @@ public class Validate {
                     rdf).flatMap(resultShapeMap ->
               new Right<String,Result>(new Result(schema, rdf, shapeMap, resultShapeMap))
             )))))));
+    }*/
+        return new Left("Not implemented");
     }
 
 
