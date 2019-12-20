@@ -4,6 +4,7 @@
 .ensime
 .ensime_cache
 .attach_pid*
+dependency-reduced-pom.xml
 
 # sbt specific
 dist/*

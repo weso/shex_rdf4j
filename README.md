@@ -28,7 +28,7 @@ mvn clean compile package
 The following line validates a turtle file against a ShEx schema using a shape map. 
 
 ```
-java -jar target/shexjava.jar -d examples/issue.ttl -s examples/issue.shex -m examples/issue.shapeMap
+java -jar target/shexrdf4j.jar -d examples/issue.ttl -s examples/issue.shex -m examples/issue.shapeMap
 ```
 
 It runs ShEx and validates the nodes according to the shapeMap.
