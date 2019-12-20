@@ -1,4 +1,4 @@
-package es.weso.shexjava;
+package es.weso.shexrdf4j;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

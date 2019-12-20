@@ -38,7 +38,7 @@
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
-										<Main-Class>es.weso.shexjava.Main</Main-Class>
+										<Main-Class>es.weso.shexrdf4j.Main</Main-Class>
 									</manifestEntries>
 								</transformer>
 							</transformers>
@@ -70,7 +70,7 @@
 						</execution>
 					</executions>
 					<configuration>
-						<mainClass>es.weso.shexjava.Main</mainClass>
+						<mainClass>es.weso.shexrdf4j.Main</mainClass>
 					</configuration>
 				</plugin>
 				<plugin>

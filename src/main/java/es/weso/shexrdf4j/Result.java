@@ -1,10 +1,9 @@
-package es.weso.shexjava;
+package es.weso.shexrdf4j;
 
 import es.weso.rdf.RDFReader;
 import es.weso.shapeMaps.ResultShapeMap;
 import es.weso.shapeMaps.ShapeMap;
 import es.weso.shex.Schema;
-import io.circe.Json;
 
 public class Result {
     public Result(Schema schema,
