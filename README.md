@@ -1,6 +1,8 @@
 shex_rdf4j
 ========
 
+[![Build Status](https://travis-ci.org/weso/shex_rdf4j.svg?branch=master)](https://travis-ci.org/weso/shex_rdf4j)
+
 Example ShEx client using Java/RDF4_J
 
 This repository contains a simple command line Java program that runs the ShEx validator using RDf4J
